@@ -1,6 +1,6 @@
 +++
 title = '01. freshPink'
-date = 2025-03-29
+date = 2025-03-28
 draft = false
 featured_image = "https://raw.githubusercontent.com/elecbrandy/freshpink/gh-pages/basic.png"
 tags = ['tag_a']
