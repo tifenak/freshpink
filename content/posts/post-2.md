@@ -1,8 +1,8 @@
 +++
 title = '02. Features'
-date = 2024-01-03
+date = 2025-03-30
 draft = false
-featured_image = "https://raw.githubusercontent.com/ElecBrandy/freshpink/gh-pages/basic.png"
+featured_image = "https://raw.githubusercontent.com/elecBrandy/freshpink/gh-pages/basic.png"
 tags = ['tag_a']
 +++
 

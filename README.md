@@ -1,14 +1,19 @@
 # freshPink
 
-![Thumbnail](https://raw.githubusercontent.com/ElecBrandy/freshpink/main/images/tn.png)  
+![Thumbnail](https://raw.githubusercontent.com/elecBrandy/freshpink/main/images/tn.png)  
 ![Screenshot](https://raw.githubusercontent.com/elecBrandy/freshpink/main/images/screenshot.png)
 
 Hello! Let me introduce the **freshPink** theme!
 
+<br>
+<br>
+
 ## Demo Site
 
-Check out the [Demo Site](https://elecBrandy.github.io/freshpink/) for a simple example and detailed tutorial.
+Check out the [_Demo Site_](https://elecBrandy.github.io/freshpink/) for a simple example and detailed tutorial.
 
+<br>
+<br>
 
 ## Getting Started with freshPink
 
@@ -53,7 +58,7 @@ In the same `hugo.toml` file, add the following section to import the theme:
 ```toml
 [module]
   [[module.imports]]
-    path = "github.com/ElecBrandy/freshpink"
+    path = "github.com/elecBrandy/freshpink"
 ```
 
 ### 5. Download the Theme Module
@@ -61,7 +66,7 @@ In the same `hugo.toml` file, add the following section to import the theme:
 Run this command in your terminal to download the theme:
 
 ```bash
-hugo mod get github.com/ElecBrandy/freshpink
+hugo mod get github.com/elecBrandy/freshpink
 ```
 
 ### 6. Run Your Site
@@ -74,13 +79,15 @@ hugo server
 
 Open your browser and visit [http://localhost:1313](http://localhost:1313) to see your site with the freshPink theme applied.
 
+<br>
+<br>
 
 ## Keeping the Theme Up to Date
 
 To update the theme to the latest commit in the future, run:
 
 ```bash
-hugo mod get -u github.com/ElecBrandy/freshpink
+hugo mod get -u github.com/elecBrandy/freshpink
 ```
 
 If you encounter any cache issues, you can clean up Hugo Modules with:
@@ -89,8 +96,11 @@ If you encounter any cache issues, you can clean up Hugo Modules with:
 hugo mod clean
 ```
 
+<br>
+<br>
+
 ## Need Help?
 
-If you have any issues or questions, please feel free to open an issue on the [GitHub repository](https://github.com/ElecBrandy/freshpink/issues).
+If you have any issues or questions, please feel free to open an issue on the [GitHub repository](https://github.com/elecBrandy/freshpink/issues).
 
 Thank you for choosing the freshPink theme! Enjoy your blogging experience!

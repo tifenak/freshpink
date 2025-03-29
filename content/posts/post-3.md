@@ -2,7 +2,7 @@
 title = '03. Shortcuts'
 date = 2024-01-04
 draft = false
-featured_image = "https://raw.githubusercontent.com/ElecBrandy/freshpink/gh-pages/basic.png"
+featured_image = "https://raw.githubusercontent.com/elecBrandy/freshpink/gh-pages/basic.png"
 tags = ['tag_b']
 +++
 
