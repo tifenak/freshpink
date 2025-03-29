@@ -1,13 +1,3 @@
-+++
-title = '01. freshPink'
-date = 2024-01-01
-draft = false
-featured_image = "https://raw.githubusercontent.com/ElecBrandy/freshpink/gh-pages/basic.png"
-tags = ['tag_a']
-+++
-
-<br>
-
 ## freshPink
 
 ![tn.png](https://raw.githubusercontent.com/ElecBrandy/freshpink/main/images/tn.png)
