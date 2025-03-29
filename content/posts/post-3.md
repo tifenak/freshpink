@@ -15,7 +15,7 @@ This shortcut is made separately for insertion at the top of each page _index.md
 ### Example
 
 ``` html
-{{</* index-title */>}}placeholder{{</* /alert */>}}
+{{</* index-title */>}}placeholder{{</* /index-title */>}}
 ```
 
 {{<index-title>}}placeholder{{</index-title>}}
