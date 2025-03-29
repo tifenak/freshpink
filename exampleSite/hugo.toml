@@ -1,0 +1,34 @@
+baseURL = "https://elecbrandy.github.io/freshpink/"
+languageCode = "en-us"
+title = "freshpink"
+canonifyURLs = true
+
+[[menus.main]]
+name = 'Home'
+url = '/'
+weight = 10
+
+[[menus.main]]
+name = 'TAGS'
+url = '/tags/'
+weight = 20
+
+[[menus.main]]
+name = 'ABOUT'
+url = '/about/'
+weight = 30
+
+[module]
+  [module.hugoVersion]
+    extended = true
+    min = "0.116.0"
+  [[module.imports]]
+    path = "github.com/elecbrandy/freshpink"
+
+[taxonomies]
+  tag = "tags"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
