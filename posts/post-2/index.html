@@ -30,17 +30,26 @@
 
 
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-000000000"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('hugo', 'G-000000000');
+</script>
+
+
 </head>
 <body>
     <header class="main-header">
 	<nav>
-	  <li><a href="https://elecbrandy.github.io/freshpink/">/home</a></li>
-	  <li><a href="https://elecbrandy.github.io/freshpink/tags/">/tags</a></li>
-	  <li><a href="https://elecbrandy.github.io/freshpink/about/">/about</a></li>
-	  <li id="theme-toggle" style="cursor: pointer;">/todark</li>
+		<li><a href="https://elecbrandy.github.io/">/freshpink</a></li>
+		<li><a href="https://elecbrandy.github.io/tags/">/tags</a></li>
+		<li><a href="https://elecbrandy.github.io/about/">/about</a></li>		
+	  	<li id="theme-toggle" style="cursor: pointer;">/todark</li>
 	</nav>
   </header>
-   
+  
   <script>
 	document.addEventListener('DOMContentLoaded', function() {
 	  const themeToggle = document.getElementById('theme-toggle');
