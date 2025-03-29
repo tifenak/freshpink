@@ -1,5 +1,5 @@
-module github.com/elecBrandy/freshpink/exampleSite
+module github.com/elecbrandy/freshpink/exampleSite
 
 go 1.20
 
-require github.com/elecBrandy/freshpink v0.0.0-20250329191901-936aca1334e5
+require github.com/elecbrandy/freshpink v0.0.0-20250329191901-936aca1334e5

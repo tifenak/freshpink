@@ -1,8 +1,8 @@
 +++
 title = '01. freshPink'
-date = 2025-03-30
+date = 2025-03-29
 draft = false
-featured_image = "https://raw.githubusercontent.com/elecBrandy/freshpink/gh-pages/basic.png"
+featured_image = "https://raw.githubusercontent.com/elecbrandy/freshpink/gh-pages/basic.png"
 tags = ['tag_a']
 +++
 
@@ -10,8 +10,8 @@ tags = ['tag_a']
 
 ## freshPink
 ____
-![Thumbnail](https://raw.githubusercontent.com/elecBrandy/freshpink/main/images/tn.png)  
-![Screenshot](https://raw.githubusercontent.com/elecBrandy/freshpink/main/images/screenshot.png)
+![Thumbnail](https://raw.githubusercontent.com/elecbrandy/freshpink/main/images/tn.png)  
+![Screenshot](https://raw.githubusercontent.com/elecbrandy/freshpink/main/images/screenshot.png)
 
 Hello! Let me introduce the **freshPink** theme!
 
@@ -20,7 +20,7 @@ Hello! Let me introduce the **freshPink** theme!
 
 ## Demo Site
 ____
-Check out the [_Demo Site_](https://elecBrandy.github.io/freshpink/) for a simple example and detailed tutorial.
+Check out the [_Demo Site_](https://elecbrandy.github.io/freshpink/) for a simple example and detailed tutorial.
 
 <br>
 <br>
@@ -68,7 +68,7 @@ In the same `hugo.toml` file, add the following section to import the theme:
 ```toml
 [module]
   [[module.imports]]
-    path = "github.com/elecBrandy/freshpink"
+    path = "github.com/elecbrandy/freshpink"
 ```
 
 ### 5. Download the Theme Module
@@ -76,7 +76,7 @@ In the same `hugo.toml` file, add the following section to import the theme:
 Run this command in your terminal to download the theme:
 
 ```bash
-hugo mod get github.com/elecBrandy/freshpink
+hugo mod get github.com/elecbrandy/freshpink
 ```
 
 ### 6. Run Your Site
@@ -97,7 +97,7 @@ ____
 To update the theme to the latest commit in the future, run:
 
 ```bash
-hugo mod get -u github.com/elecBrandy/freshpink
+hugo mod get -u github.com/elecbrandy/freshpink
 ```
 
 If you encounter any cache issues, you can clean up Hugo Modules with:
@@ -111,6 +111,6 @@ hugo mod clean
 
 ## Need Help?
 ____
-If you have any issues or questions, please feel free to open an issue on the [GitHub repository](https://github.com/elecBrandy/freshpink/issues).
+If you have any issues or questions, please feel free to open an issue on the [GitHub repository](https://github.com/elecbrandy/freshpink/issues).
 
 Thank you for choosing the freshPink theme! Enjoy your blogging experience!
