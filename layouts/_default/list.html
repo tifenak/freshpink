@@ -4,6 +4,7 @@
   <div class="page-links">
     {{ range .Pages }}
       <a href="{{ .RelPermalink }}" class="page-link"> # {{ .LinkTitle }}</a>
+      <small>{{ .Date | time.Format "2006.01.02" }}</small>
     {{ end }}
   </div>
 </div>
