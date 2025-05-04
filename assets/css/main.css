@@ -307,10 +307,7 @@
   }
   
   /* >>>>> ================ IMAGE_CSS =============== <<<<< */
-  img {
-	width: 600px;
-  }
-  
+
   .featured-container {
 	position: relative;
   }
