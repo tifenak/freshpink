@@ -3,10 +3,7 @@
   {{ .Content }}
   <div class="page-links">
     {{ range .Pages }}
-    <div class="post-title"></div>
       <a href="{{ .RelPermalink }}" class="page-link"> # {{ .LinkTitle }}</a>
-      <small>{{ .Date | time.Format "2006.01.02" }}</small>
-    </div>
     {{ end }}
   </div>
 </div>
