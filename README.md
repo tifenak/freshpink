@@ -7,15 +7,17 @@ Welcome to the **freshPink** theme! A clean and minimalist theme for [Hugo](http
 
 ## Demo Site
 
-Check out the [**Demo Site**](https://elecbrandy.github.io/freshpink/) for an example and detailed instructions.
+Check out the [**Demo Site**](https://elecbrandy.github.io/freshpink/) for an example and detailed instructions.  
+
 
 ## Quick Start Guide
 
-This guide shows you how to set up the **freshPink** theme with a new Hugo site using **Hugo Modules**, the recommended modern approach.
+This guide shows you how to set up the **freshPink** theme with a new Hugo site using **Hugo Modules**, the recommended modern approach.  
+
 
 ## Prerequisites
 
-Before you start, ensure you have:
+Before you start, ensure you have
 
 * Hugo **v0.110+ (extended)**
 * Git installed
@@ -27,6 +29,7 @@ Check your Hugo version:
 hugo version
 ```
 
+
 ## Step-by-Step Installation
 
 ### 1. Create a New Hugo Site
@@ -36,6 +39,7 @@ hugo new site myblog
 cd myblog
 ```
 
+
 ### 2. Initialize Hugo Modules
 
 ```bash
@@ -43,8 +47,9 @@ hugo mod init github.com/yourusername/myblog
 ```
 
 > Replace `yourusername/myblog` with your GitHub username and repository name (or any unique identifier).
+ 
 
-### 2. Configure `hugo.toml`
+### 3. Configure `hugo.toml`
 
 Open `hugo.toml` and modify it as follows.
 After copying and pasting, fill in the content according to your situation.
@@ -94,6 +99,7 @@ weight = 30
 ```
 
 > ⚠️ **Important:** Do **not** add `theme = "freshpink"` as this will cause errors with Hugo Modules.
+
 
 ### 4. Download the Theme
 
