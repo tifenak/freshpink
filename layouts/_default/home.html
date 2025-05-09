@@ -2,6 +2,11 @@
 <div style="padding-top: 16px;">
   {{ .Content }}
 </div>
+
+<div class="commit">
+  <img src="https://ghchart.rshah.org/49344b/{{ .Site.Params.githubUsername }}"/>
+</div>
+
 <div class="posts-list">
   {{ range first 10 .Site.RegularPages }}
     <div class="post-title">

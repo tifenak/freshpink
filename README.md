@@ -15,92 +15,125 @@ Check out the [_Demo Site_](https://elecbrandy.github.io/freshpink/) for a simpl
 <br>
 <br>
 
-## Getting Started with freshPink
 
-This guide explains how to install and apply the theme using **Hugo Modules** (recommended). Follow these steps to get your blog up and running:
+This guide walks you through applying the [`freshpink`](https://github.com/ElecBrandy/freshpink) theme to a new [Hugo](https://gohugo.io/) site using **Hugo Modules** — the recommended modern way to manage themes.
 
-### 1. Create a New Hugo Site
+---
 
-Open your terminal and run:
+## ✅ Prerequisites
 
-```bash
-hugo new site my-blog
-cd my-blog
-```
+- Hugo **v0.110+ extended**  
+- Git installed  
+- Terminal (macOS/Linux/WSL)  
 
-### 2. Initialize Hugo Modules
-
-Initialize your Hugo site as a module by running:
+Check your Hugo version:
 
 ```bash
-hugo mod init github.com/yourname/my-blog
+hugo version
+````
+
+---
+
+## 1️⃣ Create a New Hugo Site
+
+```bash
+hugo new site myblog
+cd myblog
 ```
 
-### 3. Configure Your Site
+---
 
-Open your `hugo.toml` file and customize it to match your site. For example:
+## 2️⃣ Initialize Hugo Modules
 
-```toml
-baseURL = "https://yourusername.github.io/your-repo-name/"
-title = "My Awesome Blog"
-canonifyURLs = true
-relativeURLs = false
+```bash
+hugo mod init github.com/yourname/myblog
 ```
 
-- **baseURL**: Set this to the URL of your GitHub Pages site (usually in the format `https://username.github.io/repo-name/`).
-- **title**: Choose a name for your blog.
-- Make sure the `baseURL` matches the repository name you use for GitHub Pages.
+> Replace `yourname/myblog` with your GitHub path (or any unique identifier).
 
-### 4. Add freshPink as a Hugo Module
+---
 
-In the same `hugo.toml` file, add the following section to import the theme:
+## 3️⃣ Update `hugo.toml`
+
+Open the generated `hugo.toml` and **replace or edit** it like this:
 
 ```toml
+baseURL = "https://example.org/"
+title = "My Freshpink Blog"
+languageCode = "en-us"
+
+[params]
+  author = "Your Name"
+  description = "A Hugo blog using the freshpink theme"
+
 [module]
   [[module.imports]]
-    path = "github.com/elecbrandy/freshpink"
+    path = "github.com/ElecBrandy/freshpink"
 ```
 
-### 5. Download the Theme Module
+> ❗ **Do not add `theme = "freshpink"`** — it's unnecessary with Modules and will cause errors.
 
-Run this command in your terminal to download the theme:
+---
+
+## 4️⃣ Download the Theme
 
 ```bash
-hugo mod get github.com/elecbrandy/freshpink
+hugo mod tidy
 ```
 
-### 6. Run Your Site
-
-Finally, run the Hugo server:
+> 💡 If you see an error like
+> `could not read Username for 'https://github.com': terminal prompts disabled`,
+> try running:
 
 ```bash
-hugo server
+git config --global url."git@github.com:".insteadOf "https://github.com/"
 ```
 
-Open your browser and visit [http://localhost:1313](http://localhost:1313) to see your site with the freshPink theme applied.
+---
 
-<br>
-<br>
-
-## Keeping the Theme Up to Date
-
-To update the theme to the latest commit in the future, run:
+## 5️⃣ Create Your First Post
 
 ```bash
-hugo mod get -u github.com/elecbrandy/freshpink
+hugo new posts/hello.md
 ```
 
-If you encounter any cache issues, you can clean up Hugo Modules with:
+Then edit the file at `content/posts/hello.md` and:
+
+* Set `draft: false`
+* Add some content
+
+---
+
+## 6️⃣ Run the Local Server
 
 ```bash
-hugo mod clean
+hugo server -D
 ```
 
-<br>
-<br>
+Then open: [http://localhost:1313](http://localhost:1313)
 
-## Need Help?
+You should see your blog styled with the **freshpink** theme! 🎉
 
-If you have any issues or questions, please feel free to open an issue on the [GitHub repository](https://github.com/elecbrandy/freshpink/issues).
+---
 
-Thank you for choosing the freshPink theme! Enjoy your blogging experience!
+## 🔧 Optional Next Steps
+
+* 🧭 Add navigation menus: use `[menu]` config blocks
+* 🌐 Deploy to GitHub Pages, Netlify, or Vercel
+* 🎨 Customize the theme using `layouts/` and `assets/` overrides
+
+---
+
+## 📌 Credits
+
+* Theme: [github.com/ElecBrandy/freshpink](https://github.com/ElecBrandy/freshpink)
+* Guide maintained by [@yourname](https://github.com/yourname)
+
+---
+
+```
+
+---
+
+필요하면 `.md` 파일로 따로 만들어드릴 수도 있고, 메뉴나 다크모드 설명을 추가해 확장된 버전도 제작해드릴 수 있어요. 그대로 쓸까요, 아니면 포맷이나 내용 수정해드릴까요?
+```
