@@ -277,13 +277,12 @@
   }
 
   div.commit {
-	margin-top: 16px;
 	width: 100%;
   }
   
   div.commit img {
 	display: block;
-	margin: 16px auto;
+	margin-bottom: 1rem;
 	max-width: 600px;
 	height: auto;
   }
@@ -385,7 +384,7 @@
 
   /* >>>>> ================ MISC_CSS =============== <<<<< */
   div.list {
-	margin-top: 16px;
+	margin-top: 0.5rem;
   }
   
   div.page-links {
@@ -396,5 +395,14 @@
 	display: block;
 	letter-spacing: -1px;
 	margin-right: 8px;
+  }
+
+  .breadcrumb {
+	margin-top: 2rem;
+	margin-bottom: 0.5rem;
+	font-size: 0.8rem;
+	font-weight: 600;
+	font-family: var(--title-font-family);
+	color: var(--text-color);
   }
   
