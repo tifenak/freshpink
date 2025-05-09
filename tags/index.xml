@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>tags on freshpink</title>
+    <title>Tags on freshpink</title>
     <link>https://elecbrandy.github.io/freshpink/tags/</link>
-    <description>Recent content in tags on freshpink</description>
+    <description>Recent content in Tags on freshpink</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 28 Mar 2025 00:00:00 +0000</lastBuildDate>
@@ -13,14 +13,21 @@
       <link>https://elecbrandy.github.io/freshpink/tags/tag_a/</link>
       <pubDate>Fri, 28 Mar 2025 00:00:00 +0000</pubDate>
       <guid>https://elecbrandy.github.io/freshpink/tags/tag_a/</guid>
-      <description>&lt;div class=&#34;index-title&#34;&gt;🏷️ /tags/tag_a&lt;hr&gt;&#xA;&lt;/div&gt;</description>
+      <description></description>
     </item>
     <item>
       <title>tag_b</title>
       <link>https://elecbrandy.github.io/freshpink/tags/tag_b/</link>
       <pubDate>Fri, 28 Mar 2025 00:00:00 +0000</pubDate>
       <guid>https://elecbrandy.github.io/freshpink/tags/tag_b/</guid>
-      <description>&lt;div class=&#34;index-title&#34;&gt;🏷️ /tags/tag_b&lt;hr&gt;&#xA;&lt;/div&gt;</description>
+      <description></description>
+    </item>
+    <item>
+      <title>Tag_c</title>
+      <link>https://elecbrandy.github.io/freshpink/tags/tag_c/</link>
+      <pubDate>Fri, 28 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://elecbrandy.github.io/freshpink/tags/tag_c/</guid>
+      <description></description>
     </item>
   </channel>
 </rss>

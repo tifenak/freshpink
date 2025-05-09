@@ -85,20 +85,20 @@
   <aside class="toc">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#freshpink">freshPink</a></li>
-    <li><a href="#demo-site">Demo Site</a></li>
-    <li><a href="#getting-started-with-freshpink">Getting Started with freshPink</a>
+    <li><a href="#1-freshpink--hugo-theme">1. freshPink – Hugo Theme</a></li>
+    <li><a href="#2-demo-site">2. Demo Site</a></li>
+    <li><a href="#3-prerequisites">3. Prerequisites</a></li>
+    <li><a href="#4-lets-start">4. Let&rsquo;s start</a>
       <ul>
-        <li><a href="#1-create-a-new-hugo-site">1. Create a New Hugo Site</a></li>
-        <li><a href="#2-initialize-hugo-modules">2. Initialize Hugo Modules</a></li>
-        <li><a href="#3-configure-your-site">3. Configure Your Site</a></li>
-        <li><a href="#4-add-freshpink-as-a-hugo-module">4. Add freshPink as a Hugo Module</a></li>
-        <li><a href="#5-download-the-theme-module">5. Download the Theme Module</a></li>
-        <li><a href="#6-run-your-site">6. Run Your Site</a></li>
+        <li><a href="#4-1-create-a-new-hugo-site">4-1. Create a New Hugo Site</a></li>
+        <li><a href="#4-2-initialize-hugo-modules">4-2. Initialize Hugo Modules</a></li>
+        <li><a href="#4-3-update-hugotoml">4-3. Update <code>hugo.toml</code></a></li>
+        <li><a href="#4-4-download-the-theme">4-4. Download the Theme</a></li>
+        <li><a href="#4-5-create-your-first-post">4-5. Create Your First Post</a></li>
+        <li><a href="#4-6-run-the-local-server">4-6. Run the Local Server</a></li>
       </ul>
     </li>
-    <li><a href="#keeping-the-theme-up-to-date">Keeping the Theme Up to Date</a></li>
-    <li><a href="#need-help">Need Help?</a></li>
+    <li><a href="#5-need-help">5. Need Help?</a></li>
   </ul>
 </nav>
   </aside>
@@ -114,62 +114,104 @@
     </div>
   </div>
   <br>
-<h2 id="freshpink">freshPink</h2>
+<h2 id="1-freshpink--hugo-theme">1. freshPink – Hugo Theme</h2>
 <hr>
-<p><img src="https://raw.githubusercontent.com/elecbrandy/freshpink/main/images/tn.png" alt="Thumbnail"><br>
-<img src="https://raw.githubusercontent.com/elecbrandy/freshpink/main/images/screenshot.png" alt="Screenshot"></p>
-<p>Hello! Let me introduce the <strong>freshPink</strong> theme!</p>
+<img src="https://raw.githubusercontent.com/elecbrandy/freshpink/main/images/tn.png" width="600">
+<img src="https://raw.githubusercontent.com/elecbrandy/freshpink/main/images/screenshot.png" width="600">
+<p>Welcome to the <strong>freshPink</strong> theme! A clean and minimalist theme for <a href="https://gohugo.io/">Hugo</a>, designed to give your blog a fresh look.</p>
 <br>
 <br>
-<h2 id="demo-site">Demo Site</h2>
+<h2 id="2-demo-site">2. Demo Site</h2>
 <hr>
-<p>Check out the <a href="https://elecbrandy.github.io/freshpink/"><em>Demo Site</em></a> for a simple example and detailed tutorial.</p>
+<p>Check out the <a href="https://elecbrandy.github.io/freshpink/"><strong>Demo Site</strong></a> for an example and detailed instructions.</p>
+<p>This guide walks you through applying the freshpink theme to a new Hugo site using <strong>Hugo Modules</strong> — the recommended modern way to manage themes.</p>
 <br>
 <br>
-<h2 id="getting-started-with-freshpink">Getting Started with freshPink</h2>
+<h2 id="3-prerequisites">3. Prerequisites</h2>
 <hr>
-<p>This guide explains how to install and apply the theme using <strong>Hugo Modules</strong> (recommended). Follow these steps to get your blog up and running:</p>
-<h3 id="1-create-a-new-hugo-site">1. Create a New Hugo Site</h3>
-<p>Open your terminal and run:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo new site my-blog
-</span></span><span style="display:flex;"><span>cd my-blog
-</span></span></code></pre></div><h3 id="2-initialize-hugo-modules">2. Initialize Hugo Modules</h3>
-<p>Initialize your Hugo site as a module by running:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo mod init github.com/yourname/my-blog
-</span></span></code></pre></div><h3 id="3-configure-your-site">3. Configure Your Site</h3>
-<p>Open your <code>hugo.toml</code> file and customize it to match your site. For example:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#a6e22e">baseURL</span> = <span style="color:#e6db74">&#34;https://yourusername.github.io/your-repo-name/&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">title</span> = <span style="color:#e6db74">&#34;My Awesome Blog&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">canonifyURLs</span> = <span style="color:#66d9ef">true</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">relativeURLs</span> = <span style="color:#66d9ef">false</span>
-</span></span></code></pre></div><ul>
-<li><strong>baseURL</strong>: Set this to the URL of your GitHub Pages site (usually in the format <code>https://username.github.io/repo-name/</code>).</li>
-<li><strong>title</strong>: Choose a name for your blog.</li>
-<li>Make sure the <code>baseURL</code> matches the repository name you use for GitHub Pages.</li>
+<ul>
+<li>Hugo <strong>v0.110+ extended</strong></li>
+<li>Git installed</li>
+<li>Terminal (macOS/Linux/WSL)</li>
 </ul>
-<h3 id="4-add-freshpink-as-a-hugo-module">4. Add freshPink as a Hugo Module</h3>
-<p>In the same <code>hugo.toml</code> file, add the following section to import the theme:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[<span style="color:#a6e22e">module</span>]
-</span></span><span style="display:flex;"><span>  [[<span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">imports</span>]]
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">path</span> = <span style="color:#e6db74">&#34;github.com/elecbrandy/freshpink&#34;</span>
-</span></span></code></pre></div><h3 id="5-download-the-theme-module">5. Download the Theme Module</h3>
-<p>Run this command in your terminal to download the theme:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo mod get github.com/elecbrandy/freshpink
-</span></span></code></pre></div><h3 id="6-run-your-site">6. Run Your Site</h3>
-<p>Finally, run the Hugo server:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo server
-</span></span></code></pre></div><p>Open your browser and visit <a href="http://localhost:1313">http://localhost:1313</a> to see your site with the freshPink theme applied.</p>
-<br>
-<br>
-<h2 id="keeping-the-theme-up-to-date">Keeping the Theme Up to Date</h2>
-<hr>
-<p>To update the theme to the latest commit in the future, run:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo mod get -u github.com/elecbrandy/freshpink
-</span></span></code></pre></div><p>If you encounter any cache issues, you can clean up Hugo Modules with:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo mod clean
+<p>Check your Hugo version!</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo version
 </span></span></code></pre></div><br>
 <br>
-<h2 id="need-help">Need Help?</h2>
+<h2 id="4-lets-start">4. Let&rsquo;s start</h2>
+<hr>
+<h3 id="4-1-create-a-new-hugo-site">4-1. Create a New Hugo Site</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo new site myblog
+</span></span><span style="display:flex;"><span>cd myblog
+</span></span></code></pre></div><br>
+<h3 id="4-2-initialize-hugo-modules">4-2. Initialize Hugo Modules</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo mod init github.com/yourname/myblog
+</span></span></code></pre></div><p>Replace <code>yourname/myblog</code> with your GitHub path (or any unique identifier).
+That means the repository address that you will host through GitHub. In my case, I made it <code>hugo mod init github.com/elecbrandy/elecbrandy.github.io</code>.</p>
+<br>
+<h3 id="4-3-update-hugotoml">4-3. Update <code>hugo.toml</code></h3>
+<p>Open the generated <code>hugo.toml</code> file and <strong>replace its contents completely</strong> with the configuration below. Then, update it with your own information:</p>
+<ul>
+<li><code>baseURL</code>: Enter the URL of your GitHub repository (e.g. <code>https://elecbrandy.github.io/</code>)</li>
+<li><code>title</code>: Choose the name you want for your blog</li>
+<li><code>githubUsername</code>: Your GitHub username — this is required to display your contribution graph (grass) on the homepage</li>
+<li><code>googleAnalytics</code>: (Optional) If you want to use Google Analytics, add your tracking ID here</li>
+<li>Important: <strong>Do not add or define a <code>theme</code> field.</strong> We&rsquo;re using Hugo Modules to manage the theme, so this must be left out.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#a6e22e">baseURL</span> = <span style="color:#e6db74">&#39;https://example.org/&#39;</span> <span style="color:#75715e"># your git repository address</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">title</span> = <span style="color:#e6db74">&#39;freshpink&#39;</span> <span style="color:#75715e"># your own blog title</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">languageCode</span> = <span style="color:#e6db74">&#39;en-us&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">canonifyURLs</span> = <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[[<span style="color:#a6e22e">menus</span>.<span style="color:#a6e22e">main</span>]]
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#39;Home&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">pageRef</span> = <span style="color:#e6db74">&#39;/&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[[<span style="color:#a6e22e">menus</span>.<span style="color:#a6e22e">main</span>]]
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#39;TAGS&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">pageRef</span> = <span style="color:#e6db74">&#39;/tags/&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">20</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[[<span style="color:#a6e22e">menus</span>.<span style="color:#a6e22e">main</span>]]
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#39;ABOUT&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">pageRef</span> = <span style="color:#e6db74">&#39;/about/&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">30</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[<span style="color:#a6e22e">module</span>]
+</span></span><span style="display:flex;"><span>  [<span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">hugoVersion</span>]
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">extended</span> = <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">min</span> = <span style="color:#e6db74">&#34;0.116.0&#34;</span>
+</span></span><span style="display:flex;"><span>  [[<span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">imports</span>]]
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">path</span> = <span style="color:#e6db74">&#34;github.com/elecbrandy/freshpink&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[<span style="color:#a6e22e">params</span>]
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">googleAnalytics</span> = <span style="color:#e6db74">&#39;G-000000000&#39;</span> <span style="color:#75715e"># your GoogleAnalytics code</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">githubUsername</span> = <span style="color:#e6db74">&#39;elecbrandy&#39;</span> <span style="color:#75715e"># your githubUsername</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">copyright</span> = <span style="color:#e6db74">&#39;Copyright © 2024 elecbrandy&#39;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">math</span> = <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[<span style="color:#a6e22e">taxonomies</span>]
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">tag</span> = <span style="color:#e6db74">&#39;tags&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[<span style="color:#a6e22e">markup</span>]
+</span></span><span style="display:flex;"><span>  [<span style="color:#a6e22e">markup</span>.<span style="color:#a6e22e">goldmark</span>]
+</span></span><span style="display:flex;"><span>    [<span style="color:#a6e22e">markup</span>.<span style="color:#a6e22e">goldmark</span>.<span style="color:#a6e22e">renderer</span>]
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">unsafe</span> = <span style="color:#66d9ef">true</span>
+</span></span></code></pre></div><br>
+<h3 id="4-4-download-the-theme">4-4. Download the Theme</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo mod tidy
+</span></span></code></pre></div><br>
+<h3 id="4-5-create-your-first-post">4-5. Create Your First Post</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo new posts/hello.md
+</span></span></code></pre></div><br>
+<h3 id="4-6-run-the-local-server">4-6. Run the Local Server</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo server -D
+</span></span></code></pre></div><p>Then open (local check) -&gt; <a href="http://localhost:1313">http://localhost:1313</a></p>
+<p>You should see your blog styled with the <strong>freshpink</strong> theme! 🎉</p>
+<br>
+<br>
+<h2 id="5-need-help">5. Need Help?</h2>
 <hr>
 <p>If you have any issues or questions, please feel free to open an issue on the <a href="https://github.com/elecbrandy/freshpink/issues">GitHub repository</a>.</p>
 <p>Thank you for choosing the freshPink theme! Enjoy your blogging experience!</p>

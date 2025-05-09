@@ -85,22 +85,10 @@
   <aside class="toc">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#index-title">Index-title</a>
+    <li><a href="#1-serieshtml">1. Series.html</a>
       <ul>
-        <li><a href="#example">Example</a></li>
-      </ul>
-    </li>
-    <li><a href="#github-log-img">Github log img</a>
-      <ul>
-        <li><a href="#setting-user-name">Setting user name</a></li>
-        <li><a href="#set-color">Set color</a></li>
-        <li><a href="#example-1">Example</a></li>
-      </ul>
-    </li>
-    <li><a href="#serieshtml">Series.html</a>
-      <ul>
-        <li><a href="#setting">Setting</a></li>
-        <li><a href="#example-2">Example</a></li>
+        <li><a href="#1-1-setting">1-1. Setting</a></li>
+        <li><a href="#1-2-example">1-2. Example</a></li>
       </ul>
     </li>
   </ul>
@@ -118,39 +106,11 @@
     </div>
   </div>
   <br>
-<h2 id="index-title">Index-title</h2>
-<hr>
-<p>This shortcut is made separately for insertion at the top of each page _index.md. It&rsquo;s just for the theme, so maybe you won&rsquo;t have to use it personally. The instructions are as follows, and basically, a line is inserted at the bottom.</p>
-<h3 id="example">Example</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{&lt; <span style="color:#f92672">index-title</span> &gt;}}placeholder{{&lt; /<span style="color:#f92672">index-title</span> &gt;}}
-</span></span></code></pre></div><div class="index-title">placeholder<hr>
-</div>
-
-<br>
-<br>
-<h2 id="github-log-img">Github log img</h2>
-<hr>
-<p>With this feature, you can attach images to your GitHub account&rsquo;s commit and push logs. The account is specified in the githubUsername part of the <code>hugo.toml</code> file. and If we wanted to change the colorset for this image, we could go into /layouts/shortcodes/githubcommit.html and just change the color code in the middle (the part <code>here!!!</code>).</p>
-<h3 id="setting-user-name">Setting user name</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[<span style="color:#a6e22e">params</span>]
-</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">githubUsername</span> = <span style="color:#e6db74">&#34;your_username&#34;</span>
-</span></span></code></pre></div><h3 id="set-color">Set color</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;commit&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>	&lt;<span style="color:#f92672">img</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://ghchart.rshah.org/here!!!/{{ .Site.Params.githubUsername }}&#34;</span>/&gt;
-</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">div</span>&gt;
-</span></span></code></pre></div><h3 id="example-1">Example</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{&lt; <span style="color:#f92672">githubcommit</span> &gt;}}
-</span></span></code></pre></div><div class="commit">
-    <img src="https://ghchart.rshah.org/49344b/elecbrandy"/>
-</div>
-<br>
-<br>
-<h2 id="serieshtml">Series.html</h2>
+<h2 id="1-serieshtml">1. Series.html</h2>
 <hr>
 <p>Sometimes there are articles that are difficult to categorize using tags alone. In this case, I wanted to organize certain articles into a series, for example, the “freshPink.” Creating a series would make it easier to manage related articles in one place. Adding a collapsible list-like link to each freshPink-specific markdown file would make it easier to jump from article to article, and organize the series.</p>
 <br>
-<h3 id="setting">Setting</h3>
-<br>
+<h3 id="1-1-setting">1-1. Setting</h3>
 <blockquote>
 <p>Create a Series Data File</p></blockquote>
 <p>First, you need to create a data file that contains the information about the documents in each series. Create a YAML file under Hugo’s <code>data*/</code> folder to manage the series information..</p>
@@ -174,7 +134,7 @@
 <li><code>series</code>: Refers to the YAML file name inside the <code>data/series/</code> directory (without the file extension).</li>
 </ul>
 <br>
-<h3 id="example-2">Example</h3>
+<h3 id="1-2-example">1-2. Example</h3>
 <p>When you include that code in your markdown file, the following collapsible list will be generated:</p>
 <div class="series">
   <details>
