@@ -8,58 +8,13 @@ tags = ['tag_b']
 
 <br>
 
-## Index-title
-____
-This shortcut is made separately for insertion at the top of each page _index.md. It's just for the theme, so maybe you won't have to use it personally. The instructions are as follows, and basically, a line is inserted at the bottom.
-
-### Example
-
-``` html
-{{</* index-title */>}}placeholder{{</* /index-title */>}}
-```
-
-{{<index-title>}}placeholder{{</index-title>}}
-
-
-<br>
-<br>
-
-## Github log img
-____
-With this feature, you can attach images to your GitHub account's commit and push logs. The account is specified in the githubUsername part of the `hugo.toml` file. and If we wanted to change the colorset for this image, we could go into /layouts/shortcodes/githubcommit.html and just change the color code in the middle (the part `here!!!`).
-
-### Setting user name
-``` toml
-[params]
-	githubUsername = "your_username"
-```
-
-### Set color
-```html
-<div class="commit">
-	<img src="https://ghchart.rshah.org/here!!!/{{ .Site.Params.githubUsername }}"/>
-</div>
-```
-
-### Example
-``` html
-{{</* githubcommit */>}}
-```
-
-{{<githubcommit>}}
-
-<br>
-<br>
-
-## Series.html
+## 1. Series.html
 ____
 Sometimes there are articles that are difficult to categorize using tags alone. In this case, I wanted to organize certain articles into a series, for example, the “freshPink.” Creating a series would make it easier to manage related articles in one place. Adding a collapsible list-like link to each freshPink-specific markdown file would make it easier to jump from article to article, and organize the series.  
 
 <br>
 
-### Setting
-
-<br>
+### 1-1. Setting
 
 > Create a Series Data File
 
@@ -95,7 +50,7 @@ To display the series in a markdown file, you can use the shortcode like this:
 
 <br>
 
-### Example
+### 1-2. Example
 When you include that code in your markdown file, the following collapsible list will be generated:
 
 {{< series title="📚 /freshPink tutorial" series="freshPink" >}}
