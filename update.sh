@@ -3,6 +3,7 @@ cd ./exampleSite
 
 set -e  # 에러 발생 시 중단
 echo "🧹 Cleaning Hugo module cache..."
+rm -f go.sum
 hugo mod clean
 
 echo "🔄 Updating Hugo modules..."
