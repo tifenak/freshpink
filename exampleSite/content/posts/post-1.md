@@ -8,108 +8,147 @@ tags = ['tag_a']
 
 <br>
 
-## freshPink
+## 1. freshPink – Hugo Theme
 ____
-![Thumbnail](https://raw.githubusercontent.com/elecbrandy/freshpink/main/images/tn.png)  
-![Screenshot](https://raw.githubusercontent.com/elecbrandy/freshpink/main/images/screenshot.png)
+<img src="https://raw.githubusercontent.com/elecbrandy/freshpink/main/images/tn.png" width="600">
+<img src="https://raw.githubusercontent.com/elecbrandy/freshpink/main/images/screenshot.png" width="600">
 
-Hello! Let me introduce the **freshPink** theme!
+Welcome to the **freshPink** theme! A clean and minimalist theme for [Hugo](https://gohugo.io/), designed to give your blog a fresh look.
 
 <br>
 <br>
 
-## Demo Site
+## 2. Demo Site
 ____
-Check out the [_Demo Site_](https://elecbrandy.github.io/freshpink/) for a simple example and detailed tutorial.
+Check out the [**Demo Site**](https://elecbrandy.github.io/freshpink/) for an example and detailed instructions.  
+
+This guide walks you through applying the freshpink theme to a new Hugo site using **Hugo Modules** — the recommended modern way to manage themes.
 
 <br>
 <br>
 
-## Getting Started with freshPink
+## 3. Prerequisites
 ____
-This guide explains how to install and apply the theme using **Hugo Modules** (recommended). Follow these steps to get your blog up and running:
+- Hugo **v0.110+ extended**  
+- Git installed  
+- Terminal (macOS/Linux/WSL)  
 
-### 1. Create a New Hugo Site
-
-Open your terminal and run:
+Check your Hugo version!
 
 ```bash
-hugo new site my-blog
-cd my-blog
+hugo version
 ```
 
-### 2. Initialize Hugo Modules
+<br>
+<br>
 
-Initialize your Hugo site as a module by running:
+## 4. Let's start
+____
+
+### 4-1. Create a New Hugo Site
 
 ```bash
-hugo mod init github.com/yourname/my-blog
+hugo new site myblog
+cd myblog
 ```
 
-### 3. Configure Your Site
+<br>
 
-Open your `hugo.toml` file and customize it to match your site. For example:
+### 4-2. Initialize Hugo Modules
 
-```toml
-baseURL = "https://yourusername.github.io/your-repo-name/"
-title = "My Awesome Blog"
+```bash
+hugo mod init github.com/yourname/myblog
+```
+
+Replace `yourname/myblog` with your GitHub path (or any unique identifier).
+That means the repository address that you will host through GitHub. In my case, I made it `hugo mod init github.com/elecbrandy/elecbrandy.github.io`.
+
+<br>
+
+### 4-3. Update `hugo.toml`
+
+Open the generated `hugo.toml` file and **replace its contents completely** with the configuration below. Then, update it with your own information:
+
+* `baseURL`: Enter the URL of your GitHub repository (e.g. `https://elecbrandy.github.io/`)
+* `title`: Choose the name you want for your blog
+* `githubUsername`: Your GitHub username — this is required to display your contribution graph (grass) on the homepage
+* `googleAnalytics`: (Optional) If you want to use Google Analytics, add your tracking ID here
+* Important: **Do not add or define a `theme` field.** We're using Hugo Modules to manage the theme, so this must be left out.
+
+``` toml
+baseURL = 'https://example.org/' # your git repository address
+title = 'freshpink' # your own blog title
+languageCode = 'en-us'
 canonifyURLs = true
-relativeURLs = false
-```
 
-- **baseURL**: Set this to the URL of your GitHub Pages site (usually in the format `https://username.github.io/repo-name/`).
-- **title**: Choose a name for your blog.
-- Make sure the `baseURL` matches the repository name you use for GitHub Pages.
+[[menus.main]]
+name = 'Home'
+pageRef = '/'
+weight = 10
 
-### 4. Add freshPink as a Hugo Module
+[[menus.main]]
+name = 'TAGS'
+pageRef = '/tags/'
+weight = 20
 
-In the same `hugo.toml` file, add the following section to import the theme:
+[[menus.main]]
+name = 'ABOUT'
+pageRef = '/about/'
+weight = 30
 
-```toml
 [module]
+  [module.hugoVersion]
+    extended = true
+    min = "0.116.0"
   [[module.imports]]
     path = "github.com/elecbrandy/freshpink"
+
+[params]
+  googleAnalytics = 'G-000000000' # your GoogleAnalytics code
+  githubUsername = 'elecbrandy' # your githubUsername
+  copyright = 'Copyright © 2024 elecbrandy'
+  math = true
+
+[taxonomies]
+  tag = 'tags'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
 ```
 
-### 5. Download the Theme Module
+<br>
 
-Run this command in your terminal to download the theme:
+### 4-4. Download the Theme
 
 ```bash
-hugo mod get github.com/elecbrandy/freshpink
+hugo mod tidy
 ```
 
-### 6. Run Your Site
+<br>
 
-Finally, run the Hugo server:
+### 4-5. Create Your First Post
 
 ```bash
-hugo server
+hugo new posts/hello.md
+```
+<br>
+
+### 4-6. Run the Local Server
+
+```bash
+hugo server -D
 ```
 
-Open your browser and visit [http://localhost:1313](http://localhost:1313) to see your site with the freshPink theme applied.
+Then open (local check) -> [http://localhost:1313](http://localhost:1313)  
+
+You should see your blog styled with the **freshpink** theme! 🎉
 
 <br>
 <br>
 
-## Keeping the Theme Up to Date
-____
-To update the theme to the latest commit in the future, run:
-
-```bash
-hugo mod get -u github.com/elecbrandy/freshpink
-```
-
-If you encounter any cache issues, you can clean up Hugo Modules with:
-
-```bash
-hugo mod clean
-```
-
-<br>
-<br>
-
-## Need Help?
+## 5. Need Help?
 ____
 If you have any issues or questions, please feel free to open an issue on the [GitHub repository](https://github.com/elecbrandy/freshpink/issues).
 

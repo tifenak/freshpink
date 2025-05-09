@@ -5,11 +5,13 @@
 
 Welcome to the **freshPink** theme! A clean and minimalist theme for [Hugo](https://gohugo.io/), designed to give your blog a fresh look.
 
+<br>
+
 ## Demo Site
 
 Check out the [**Demo Site**](https://elecbrandy.github.io/freshpink/) for an example and detailed instructions.  
 
-This guide walks you through applying the [`freshpink`](https://github.com/ElecBrandy/freshpink) theme to a new [Hugo](https://gohugo.io/) site using **Hugo Modules** — the recommended modern way to manage themes.
+This guide walks you through applying the freshpink theme to a new Hugo site using **Hugo Modules** — the recommended modern way to manage themes.
 
 <br>
 
@@ -42,30 +44,63 @@ cd myblog
 hugo mod init github.com/yourname/myblog
 ```
 
-> Replace `yourname/myblog` with your GitHub path (or any unique identifier).
+Replace `yourname/myblog` with your GitHub path (or any unique identifier).
+That means the repository address that you will host through GitHub. In my case, I made it `hugo mod init github.com/elecbrandy/elecbrandy.github.io`.
+
+<br>
 
 ## 3. Update `hugo.toml`
 
-Open the generated `hugo.toml` and **replace or edit** it like this ->
+Open the generated `hugo.toml` file and **replace its contents completely** with the configuration below. Then, update it with your own information:
 
-```toml
-baseURL = "https://example.org/"
-title = "My Freshpink Blog"
-languageCode = "en-us"
+* `baseURL`: Enter the URL of your GitHub repository (e.g. `https://elecbrandy.github.io/`)
+* `title`: Choose the name you want for your blog
+* `githubUsername`: Your GitHub username — this is required to display your contribution graph (grass) on the homepage
+* `googleAnalytics`: (Optional) If you want to use Google Analytics, add your tracking ID here
+* Important: **Do not add or define a `theme` field.** We're using Hugo Modules to manage the theme, so this must be left out.
 
-[params]
-  author = "Your Name"
-  description = "A Hugo blog using the freshpink theme"
+``` toml
+baseURL = 'https://example.org/' # your git repository address
+title = 'freshpink' # your own blog title
+languageCode = 'en-us'
+canonifyURLs = true
+
+[[menus.main]]
+name = 'Home'
+pageRef = '/'
+weight = 10
+
+[[menus.main]]
+name = 'TAGS'
+pageRef = '/tags/'
+weight = 20
+
+[[menus.main]]
+name = 'ABOUT'
+pageRef = '/about/'
+weight = 30
 
 [module]
   [module.hugoVersion]
     extended = true
     min = "0.116.0"
   [[module.imports]]
-    path = "github.com/ElecBrandy/freshpink"
-```
+    path = "github.com/elecbrandy/freshpink"
 
-> ❗ **Do not add `theme = "freshpink"`** — it's unnecessary with Modules and will cause errors.
+[params]
+  googleAnalytics = 'G-000000000' # your GoogleAnalytics code
+  githubUsername = 'elecbrandy' # your githubUsername
+  copyright = 'Copyright © 2024 elecbrandy'
+  math = true
+
+[taxonomies]
+  tag = 'tags'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+```
 
 <br>
 
@@ -73,14 +108,6 @@ languageCode = "en-us"
 
 ```bash
 hugo mod tidy
-```
-
-> 💡 If you see an error like
-> `could not read Username for 'https://github.com': terminal prompts disabled`,
-> try running:
-
-```bash
-git config --global url."git@github.com:".insteadOf "https://github.com/"
 ```
 
 <br>
@@ -98,6 +125,6 @@ hugo new posts/hello.md
 hugo server -D
 ```
 
-Then open -> [http://localhost:1313](http://localhost:1313)
+Then open (local check) -> [http://localhost:1313](http://localhost:1313)
 
 You should see your blog styled with the **freshpink** theme! 🎉
