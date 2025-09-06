@@ -7,9 +7,13 @@ Welcome to the **freshPink** theme! A clean and minimalist theme for [Hugo](http
 
 <br>
 
-![Enabling the GitHub Contributions Chart](https://img.shields.io/badge/-Update!-brightgreen)
+> [!NOTE] 
+> Hugo **v0.110+ extended**  
 
-## Enabling the GitHub Contributions Chart
+<br>
+<br>
+
+## 😎 `2025.09.07` New updates! 
 
 **Edit your `config.toml`!**
 
@@ -27,6 +31,7 @@ Welcome to the **freshPink** theme! A clean and minimalist theme for [Hugo](http
 ```
 
 <br>
+<br>
 
 ## Demo Site
 
@@ -35,18 +40,6 @@ Check out the [**Demo Site**](https://elecbrandy.github.io/freshpink/) for an ex
 This guide walks you through applying the freshpink theme to a new Hugo site using **Hugo Modules** — the recommended modern way to manage themes.
 
 <br>
-
-## Prerequisites
-
-- Hugo **v0.110+ extended**  
-- Git installed  
-- Terminal (macOS/Linux/WSL)  
-
-Check your Hugo version!
-
-```bash
-hugo version
-```
 
 <br>
 
@@ -109,10 +102,12 @@ weight = 30
     path = "github.com/elecbrandy/freshpink"
 
 [params]
-  googleAnalytics = 'G-000000000' # your GoogleAnalytics code
-  githubUsername = 'elecbrandy' # your githubUsername
-  copyright = 'Copyright © 2024 elecbrandy'
+  googleAnalytics   = "G-000000000"   # Your Google Analytics tracking ID
+  primaryColor      = "#ec42ff"     # Primary theme color (hex code)
+  githubUsername    = "elecbrandy"    # GitHub username for contribution chart
+  showGithubChart   = true            # Set to true to display the GitHub contributions chart
   math = true
+  copyright = 'Copyright © 2024 elecbrandy'
 
 [taxonomies]
   tag = 'tags'
