@@ -2,9 +2,15 @@
 
 {{ partial "breadcrumb.html" . }}
 
-<div class="commit">
-  <img src="https://ghchart.rshah.org/49344b/{{ .Site.Params.githubUsername }}"/>
-</div>
+{{ if and .Site.Params.showGithubChart .Site.Params.githubUsername .Site.Params.primaryColor }}
+  {{ $color := .Site.Params.primaryColor | replaceRE "^#" "" }}
+  <div class="commit">
+    <img
+      src="https://ghchart.rshah.org/{{ $color }}/{{ .Site.Params.githubUsername }}"
+    />
+  </div>
+{{ end }}
+
 
 <div class="posts-list">
   {{ range first 10 .Site.RegularPages }}

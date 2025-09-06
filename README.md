@@ -7,6 +7,27 @@ Welcome to the **freshPink** theme! A clean and minimalist theme for [Hugo](http
 
 <br>
 
+![Enabling the GitHub Contributions Chart](https://img.shields.io/badge/-Update!-brightgreen)
+
+## Enabling the GitHub Contributions Chart
+
+**Edit your `config.toml`!**
+
+* Try changing your `primaryColor`.
+* Toggle the GitHub contributions chart display on your homepage on and off. (true / false)
+
+``` toml
+[params]
+  googleAnalytics   = "G-000000000"   # Your Google Analytics tracking ID
+  githubUsername    = "elecbrandy"    # GitHub username for contribution chart
+  primaryColor      = "#ec42ff"     # Primary theme color (hex code)
+  showGithubChart   = true            # Set to true to display the GitHub contributions chart
+  math = true
+  copyright = 'Copyright © 2024 elecbrandy'
+```
+
+<br>
+
 ## Demo Site
 
 Check out the [**Demo Site**](https://elecbrandy.github.io/freshpink/) for an example and detailed instructions.  

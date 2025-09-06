@@ -26,11 +26,12 @@ weight = 30
     path = "github.com/elecbrandy/freshpink"
 
 [params]
-  googleAnalytics = 'G-000000000' # your GoogleAnalytics code
-  githubUsername = 'elecbrandy' # your githubUsername
-  copyright = 'Copyright © 2024 elecbrandy'
+  googleAnalytics   = "G-000000000"   # Your Google Analytics tracking ID
+  primaryColor      = "#ec42ff"     # Primary theme color (hex code)
+  githubUsername    = "elecbrandy"    # GitHub username for contribution chart
+  showGithubChart   = true            # Set to true to display the GitHub contributions chart
   math = true
-  primaryColor = "#007bff"
+  copyright = 'Copyright © 2024 elecbrandy'
 
 [taxonomies]
   tag = 'tags'

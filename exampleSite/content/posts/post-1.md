@@ -10,6 +10,7 @@ tags = ['tag_a']
 
 ## 1. freshPink – Hugo Theme
 ____
+
 <img src="https://raw.githubusercontent.com/elecbrandy/freshpink/main/images/tn.png" width="600">
 <img src="https://raw.githubusercontent.com/elecbrandy/freshpink/main/images/screenshot.png" width="600">
 
@@ -20,6 +21,7 @@ Welcome to the **freshPink** theme! A clean and minimalist theme for [Hugo](http
 
 ## 2. Demo Site
 ____
+
 Check out the [**Demo Site**](https://elecbrandy.github.io/freshpink/) for an example and detailed instructions.  
 
 This guide walks you through applying the freshpink theme to a new Hugo site using **Hugo Modules** — the recommended modern way to manage themes.
@@ -67,12 +69,15 @@ That means the repository address that you will host through GitHub. In my case,
 
 ### 4-3. Update `hugo.toml`
 
-Open the generated `hugo.toml` file and **replace its contents completely** with the configuration below. Then, update it with your own information:
+Open the generated `hugo.toml` file and **replace its contents completely** with the configuration below. Then, update it with your own information -> 
 
 * `baseURL`: Enter the URL of your GitHub repository (e.g. `https://elecbrandy.github.io/`)
 * `title`: Choose the name you want for your blog
 * `githubUsername`: Your GitHub username — this is required to display your contribution graph (grass) on the homepage
 * `googleAnalytics`: (Optional) If you want to use Google Analytics, add your tracking ID here
+* `primaryColor`: Primary theme color (hex code)
+* `showGithubChart`: Set to true to display the GitHub contributions chart (true / false)
+
 * Important: **Do not add or define a `theme` field.** We're using Hugo Modules to manage the theme, so this must be left out.
 
 ``` toml
@@ -104,10 +109,12 @@ weight = 30
     path = "github.com/elecbrandy/freshpink"
 
 [params]
-  googleAnalytics = 'G-000000000' # your GoogleAnalytics code
-  githubUsername = 'elecbrandy' # your githubUsername
-  copyright = 'Copyright © 2024 elecbrandy'
+  googleAnalytics   = "G-000000000"   # Your Google Analytics tracking ID
+  primaryColor      = "#ec42ff"     # Primary theme color (hex code)
+  githubUsername    = "elecbrandy"    # GitHub username for contribution chart
+  showGithubChart   = true            # Set to true to display the GitHub contributions chart
   math = true
+  copyright = 'Copyright © 2024 elecbrandy'
 
 [taxonomies]
   tag = 'tags'
@@ -150,6 +157,7 @@ You should see your blog styled with the **freshpink** theme! 🎉
 
 ## 5. Need Help?
 ____
+
 If you have any issues or questions, please feel free to open an issue on the [GitHub repository](https://github.com/elecbrandy/freshpink/issues).
 
 Thank you for choosing the freshPink theme! Enjoy your blogging experience!

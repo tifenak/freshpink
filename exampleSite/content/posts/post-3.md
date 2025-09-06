@@ -18,7 +18,7 @@ Sometimes there are articles that are difficult to categorize using tags alone. 
 
 > Create a Series Data File
 
-First, you need to create a data file that contains the information about the documents in each series. Create a YAML file under Hugo’s `data*/` folder to manage the series information..
+First, you need to create a data file that contains the information about the documents in each series. Create a YAML file under Hugo’s `data*/` folder to manage the series information...
 
 Example: `data/series/freshPink.yaml`
 
@@ -39,7 +39,7 @@ In this file, the `items` list includes the name and link of each document that 
 
 > Create the Shortcode File
 
-To display the series in a markdown file, you can use the shortcode like this:
+To display the series in a markdown file, you can use the shortcode like this!
 
 ``` markdown
 {{</* series title="📚 /freshPink tutorial" series="freshPink" */>}}
@@ -51,9 +51,11 @@ To display the series in a markdown file, you can use the shortcode like this:
 <br>
 
 ### 1-2. Example
-When you include that code in your markdown file, the following collapsible list will be generated:
+When you include that code in your markdown file, the following collapsible list will be generated!
 
+``` markdown
 {{< series title="📚 /freshPink tutorial" series="freshPink" >}}
+```
 
 <br>
 <br>
