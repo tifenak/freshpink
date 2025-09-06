@@ -2,6 +2,13 @@
 <meta name="viewport" content="width=device-width">
 <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
 {{ partialCached "head/css.html" . }}
+{{- with .Site.Params.primaryColor -}}
+<style>
+  :root {
+    --primary-color: {{ . | default "#ec42ff" }};
+  }
+</style>
+{{- end -}}
 {{ partialCached "head/js.html" . }}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

@@ -30,6 +30,7 @@ weight = 30
   githubUsername = 'elecbrandy' # your githubUsername
   copyright = 'Copyright © 2024 elecbrandy'
   math = true
+  primaryColor = "#007bff"
 
 [taxonomies]
   tag = 'tags'
