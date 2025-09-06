@@ -11,14 +11,13 @@ Welcome to the **freshPink** theme! A clean and minimalist theme for [Hugo](http
 > Hugo **v0.110+ extended**  
 
 <br>
-<br>
 
 ## 😎 `2025.09.07` New updates! 
 
 **Edit your `config.toml`!**
 
-* Try changing your `primaryColor`.
-* Toggle the GitHub contributions chart display on your homepage on and off. (true / false)
+* `primaryColor`: Try changing your theme's primary coloer
+* `showGithubChart`: Toggle the GitHub contributions chart display on your homepage on and off. (true / false)
 
 ``` toml
 [params]
