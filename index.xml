@@ -20,7 +20,7 @@
       <link>https://elecbrandy.github.io/freshpink/posts/post-2/</link>
       <pubDate>Fri, 28 Mar 2025 00:00:00 +0000</pubDate>
       <guid>https://elecbrandy.github.io/freshpink/posts/post-2/</guid>
-      <description>&lt;br&gt;&#xA;&lt;h2 id=&#34;1-image-area&#34;&gt;1. Image Area&lt;/h2&gt;&#xA;&lt;p&gt;This theme provides an image area feature. You can insert a wide image area of your choice at the top of your &lt;code&gt;.md&lt;/code&gt; file according to the tomel format: &lt;code&gt;featured_image = “ ”&lt;/code&gt;.Insert a nice image that represents your post.&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;h2 id=&#34;2-tag&#34;&gt;2. Tag&lt;/h2&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;In each &lt;code&gt;.md&lt;/code&gt; file, you&amp;rsquo;ll also find a &lt;code&gt;tags = []&lt;/code&gt; field in the front matter. This is where you can assign tags to your post. For example:&lt;/p&gt;</description>
+      <description>&lt;br&gt;&#xA;&lt;h2 id=&#34;1-image-area&#34;&gt;1. Image Area&lt;/h2&gt;&#xA;&lt;p&gt;This theme provides an image area feature. You can insert a wide image area of your choice at the top of your &lt;code&gt;.md&lt;/code&gt; file according to the tomel format: &lt;code&gt;featured_image = “ ”&lt;/code&gt;.Insert a nice image that represents your post.&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;h2 id=&#34;2-tag&#34;&gt;2. Tag&lt;/h2&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;In each &lt;code&gt;.md&lt;/code&gt; file, you&amp;rsquo;ll also find a &lt;code&gt;tags = []&lt;/code&gt; field in the front matter. This is where you can assign tags to your post.&lt;/p&gt;</description>
     </item>
     <item>
       <title>03. Shortcuts</title>

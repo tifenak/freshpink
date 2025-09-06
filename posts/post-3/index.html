@@ -18,8 +18,11 @@
 
       <link rel="stylesheet" href="https://elecbrandy.github.io/freshpink/css/main.min.d44c672ab09ff4e7a40192b4c273b29b705ce87d7f4df5223640e4c24f28f310.css" integrity="sha256-1ExnKrCf9OekAZK0wnOym3Bc6H1/TfUiNkDkwk8o8xA=" crossorigin="anonymous">
       <link rel="stylesheet" href="https://elecbrandy.github.io/freshpink/css/min600.min.c55885430d625813d1a6770ef6712b8534781fdd318699edd1bb9c6f62907507.css" integrity="sha256-xViFQw1iWBPRpncO9nErhTR4H90xhpnt0bucb2KQdQc=" crossorigin="anonymous">
-
-
+<style>
+  :root {
+    --primary-color: #007bff;
+  }
+</style>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,7 +37,7 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('hugo', 'G-000000000');
+  gtag('config', 'G-000000000');
 </script>
 
 
@@ -112,7 +115,7 @@
 <h3 id="1-1-setting">1-1. Setting</h3>
 <blockquote>
 <p>Create a Series Data File</p></blockquote>
-<p>First, you need to create a data file that contains the information about the documents in each series. Create a YAML file under Hugo’s <code>data*/</code> folder to manage the series information..</p>
+<p>First, you need to create a data file that contains the information about the documents in each series. Create a YAML file under Hugo’s <code>data*/</code> folder to manage the series information&hellip;</p>
 <p>Example: <code>data/series/freshPink.yaml</code></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;freshPink&#34;</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">items</span>:
@@ -126,7 +129,7 @@
 <br>
 <blockquote>
 <p>Create the Shortcode File</p></blockquote>
-<p>To display the series in a markdown file, you can use the shortcode like this:</p>
+<p>To display the series in a markdown file, you can use the shortcode like this!</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>{{&lt; series title=&#34;📚 /freshPink tutorial&#34; series=&#34;freshPink&#34; &gt;}}
 </span></span></code></pre></div><ul>
 <li><code>title</code>: This will be the title that users can click to expand the list.</li>
@@ -134,8 +137,8 @@
 </ul>
 <br>
 <h3 id="1-2-example">1-2. Example</h3>
-<p>When you include that code in your markdown file, the following collapsible list will be generated:</p>
-<div class="series">
+<p>When you include that code in your markdown file, the following collapsible list will be generated!</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><div class="series">
   <details>
     <summary>📚 /freshPink tutorial</summary>
     <ul>
@@ -154,7 +157,7 @@
   </details>
 </div>
 
-<br>
+</span></span></code></pre></div><br>
 <br>
 
 

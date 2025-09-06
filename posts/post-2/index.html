@@ -18,8 +18,11 @@
 
       <link rel="stylesheet" href="https://elecbrandy.github.io/freshpink/css/main.min.d44c672ab09ff4e7a40192b4c273b29b705ce87d7f4df5223640e4c24f28f310.css" integrity="sha256-1ExnKrCf9OekAZK0wnOym3Bc6H1/TfUiNkDkwk8o8xA=" crossorigin="anonymous">
       <link rel="stylesheet" href="https://elecbrandy.github.io/freshpink/css/min600.min.c55885430d625813d1a6770ef6712b8534781fdd318699edd1bb9c6f62907507.css" integrity="sha256-xViFQw1iWBPRpncO9nErhTR4H90xhpnt0bucb2KQdQc=" crossorigin="anonymous">
-
-
+<style>
+  :root {
+    --primary-color: #007bff;
+  }
+</style>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,7 +37,7 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('hugo', 'G-000000000');
+  gtag('config', 'G-000000000');
 </script>
 
 
@@ -86,8 +89,10 @@
   <ul>
     <li><a href="#1-image-area">1. Image Area</a></li>
     <li><a href="#2-tag">2. Tag</a></li>
-    <li><a href="#3-toc">3. TOC</a></li>
-    <li><a href="#4-back-to-top-button">4. Back to Top Button</a></li>
+    <li><a href="#3-primary-color">3. Primary color</a></li>
+    <li><a href="#4-ghchart">4. ghchart</a></li>
+    <li><a href="#5-toc">5. TOC</a></li>
+    <li><a href="#6-back-to-top-button">6. Back to Top Button</a></li>
   </ul>
 </nav>
   </aside>
@@ -109,9 +114,9 @@
 <br>
 <h2 id="2-tag">2. Tag</h2>
 <hr>
-<p>In each <code>.md</code> file, you&rsquo;ll also find a <code>tags = []</code> field in the front matter. This is where you can assign tags to your post. For example:</p>
+<p>In each <code>.md</code> file, you&rsquo;ll also find a <code>tags = []</code> field in the front matter. This is where you can assign tags to your post.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#a6e22e">tags</span> = [<span style="color:#e6db74">&#39;tag_a&#39;</span>]
-</span></span></code></pre></div><p>You can assign <strong>multiple tags</strong> to a single post, like this:</p>
+</span></span></code></pre></div><p>You can assign <strong>multiple tags</strong> to a single post, like this -&gt;</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#a6e22e">tags</span> = [<span style="color:#e6db74">&#39;tag_a&#39;</span>, <span style="color:#e6db74">&#39;tag_c&#39;</span>]
 </span></span></code></pre></div><p>On my own blog, I often use tags like <code>['c', 'unix']</code>.</p>
 <p>Now, what if you want to browse all posts by tag? Naturally, you’d want a <strong>Tags</strong> page where your custom tags are listed and clickable. Here&rsquo;s how to enable that -&gt;</p>
@@ -119,16 +124,31 @@
 <li>Go to your <code>content/tags</code> directory (create it if it doesn’t exist).</li>
 <li>Inside, create one <code>.md</code> file for each tag you want to appear — for example -&gt;</li>
 </ol>
-<pre tabindex="0"><code>content/tags/tag_a/_index.md
-</code></pre><p>That’s it! Hugo will automatically generate tag listing pages for you. Simple, right?</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>content/tags/tag_a/_index.md
+</span></span></code></pre></div><p>That’s it! Hugo will automatically generate tag listing pages for you. Simple, right?</p>
 <br>
 <br>
-<h2 id="3-toc">3. TOC</h2>
+<h2 id="3-primary-color">3. Primary color</h2>
+<hr>
+<p>You can customize the primary color to anything you like. Since pink felt a bit too bright, it’s now configurable—try out different shades! Just open your <code>hugo.toml</code> file and update the <code>primaryColor</code> value under the <code>params</code> section.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[<span style="color:#a6e22e">params</span>]
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">primaryColor</span> = <span style="color:#e6db74">&#34;#ec42ff&#34;</span>     <span style="color:#75715e"># Primary theme color (hex code)</span>
+</span></span></code></pre></div><br>
+<br>
+<h2 id="4-ghchart">4. ghchart</h2>
+<hr>
+<p>On your homepage, you can display your GitHub contributions chart. Just open your <code>hugo.toml</code> (or <code>config.toml</code>) file and update the <code>params</code> section with your details. Control the chart’s visibility by setting <code>showGithubChart</code> to <code>true</code> or <code>false</code>, and feel free to customize the <code>primaryColor</code> value to any hex code you like.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[<span style="color:#a6e22e">params</span>]
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">githubUsername</span>    = <span style="color:#e6db74">&#34;elecbrandy&#34;</span>    <span style="color:#75715e"># GitHub username for contribution chart</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">showGithubChart</span>   = <span style="color:#66d9ef">true</span>            <span style="color:#75715e"># Set to true to display the GitHub contributions chart</span>
+</span></span></code></pre></div><br>
+<br>
+<h2 id="5-toc">5. TOC</h2>
 <hr>
 <p>This theme has a TOC. It&rsquo;s on the left side of the body, and by default, it&rsquo;s transparent so it doesn&rsquo;t get in the way of reading the post. When you hover over it, it actually turns into an actionable text. As for the <code>&lt;h1&gt;</code> tag, it&rsquo;s considered a heading tag and can be hard to recognize to prevent abuse! Similar to hugo&rsquo;s tendency.</p>
 <br>
 <br>
-<h2 id="4-back-to-top-button">4. Back to Top Button</h2>
+<h2 id="6-back-to-top-button">6. Back to Top Button</h2>
 <p>A &ldquo;Back to Top&rdquo; button, implemented via <a href="https://github.com/vfeskov/vanilla-back-to-top"><strong>Vanilla Back to Top</strong></a>, enhances navigation on your blog. This convenience feature makes it easy for readers to return to the top of the page, improving the overall user experience.</p>
 <br>
 <br>
