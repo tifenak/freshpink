@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/' # your git repository address
+baseURL = 'https://elecbrandy.github.io/freshpink/' # your git repository address
 title = 'freshpink' # your own blog title
 languageCode = 'en-us'
 canonifyURLs = true
