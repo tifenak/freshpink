@@ -8,79 +8,102 @@ tags = ['tag_a', 'tag_c']
 
 <br>
 
-## 1. Image Area
-This theme provides an image area feature. You can insert a wide image area of your choice at the top of your `.md` file according to the tomel format: `featured_image = “ ”`.Insert a nice image that represents your post.
-
-<br>
-<br>
-
-## 2. Tag
+## 1. Main Image
 ____
+You can set a main image on the homepage.
+Add the image URL in the `[params]` section of `hugo.toml` under `mainImageUrl`.
 
-In each `.md` file, you'll also find a `tags = []` field in the front matter. This is where you can assign tags to your post. 
+If you don’t want a main image, set `showMainImage` to `false`.
 
 ```toml
+mainImageUrl = "https://i.imgur.com/URQWyyY.png"
+showMainImage = true
+```
+
+<br>
+<br>
+
+## 2. GitHub Contribution Chart
+____
+
+You can also show your GitHub contribution graph on the homepage.
+Add your GitHub username to `githubUsername` in the `[params]` section of `hugo.toml`.
+Control visibility with `showGithubChart`.
+
+```toml
+githubUsername = "elecbrandy"
+showGithubChart = true
+```
+
+<br>
+<br>
+
+## 3. Primary Color
+____
+By default, the primary color is set to *freshpink*.
+You can change it to any color you like in `hugo.toml` using a hex code.
+
+```toml
+primaryColor = "#fa8b84"
+```
+
+<br>
+<br>
+
+## 4. Featured Image in Posts
+____
+Each post can have a featured image.
+At the top of your `.md` file, add the following in TOML format. This will display the image above your post.
+
+```markdown
++++
+title = '{{ replace .File.ContentBaseName "-" " " | title }}'
+date = {{ .Date }}
+featured_image = "/basic.png"
+tags = ['tag1']
+draft = true
++++
+```
+
+<br>
+<br>
+
+## 5. Tags
+____
+In the front matter of each `.md` file, you’ll see a `tags = []` field.
+Use this to assign tags to your post.
+
+```markdown
 tags = ['tag_a']
 ```
 
-You can assign **multiple tags** to a single post, like this ->
+You can assign multiple tags ->
 
-```toml
+```markdown
 tags = ['tag_a', 'tag_c']
 ```
 
-On my own blog, I often use tags like `['c', 'unix']`.
+To browse posts by tag, create a **Tags page**:
 
-Now, what if you want to browse all posts by tag? Naturally, you’d want a **Tags** page where your custom tags are listed and clickable. Here's how to enable that ->
-
-1. Go to your `content/tags` directory (create it if it doesn’t exist).
-2. Inside, create one `.md` file for each tag you want to appear — for example ->
-
-``` bash
-content/tags/tag_a/_index.md
-```
-
-That’s it! Hugo will automatically generate tag listing pages for you. Simple, right?
+1. Go to `content/tags` (create it if it doesn’t exist).
+2. Inside, create a directory named after your tag (e.g., `unix`).
+   This makes `content/tags/unix` and completes the setup.
 
 <br>
 <br>
 
-## 3. Primary color
+## 6. Table of Contents (TOC)
 ____
-
-You can customize the primary color to anything you like. Since pink felt a bit too bright, it’s now configurable—try out different shades! Just open your `hugo.toml` file and update the `primaryColor` value under the `params` section.
-
-``` toml
-[params]
-  primaryColor = "#ec42ff"     # Primary theme color (hex code)
-```
+The theme includes a TOC on the left side of the post.
+By default, it is transparent so it doesn’t distract while reading. When you hover over it, it becomes visible and clickable.
 
 <br>
 <br>
 
-## 4. ghchart
+## 7. Back to Top Button
 ____
-
-On your homepage, you can display your GitHub contributions chart. Just open your `hugo.toml` (or `config.toml`) file and update the `params` section with your details. Control the chart’s visibility by setting `showGithubChart` to `true` or `false`, and feel free to customize the `primaryColor` value to any hex code you like.
-
-``` toml
-[params]
-  githubUsername    = "elecbrandy"    # GitHub username for contribution chart
-  showGithubChart   = true            # Set to true to display the GitHub contributions chart
-```
-
-<br>
-<br>
-
-## 5. TOC
-____
-This theme has a TOC. It's on the left side of the body, and by default, it's transparent so it doesn't get in the way of reading the post. When you hover over it, it actually turns into an actionable text. As for the `<h1>` tag, it's considered a heading tag and can be hard to recognize to prevent abuse! Similar to hugo's tendency.
-
-<br>
-<br>
-
-## 6. Back to Top Button
-A "Back to Top" button, implemented via [**Vanilla Back to Top**](https://github.com/vfeskov/vanilla-back-to-top), enhances navigation on your blog. This convenience feature makes it easy for readers to return to the top of the page, improving the overall user experience.
+A "Back to Top" button is included with [Vanilla Back to Top](https://github.com/vfeskov/vanilla-back-to-top).
+It makes navigation easier by letting readers quickly return to the top of the page.
 
 <br>
 <br>

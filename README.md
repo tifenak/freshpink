@@ -12,21 +12,44 @@ Welcome to the **freshPink** theme! A clean and minimalist theme for [Hugo](http
 
 <br>
 
-## 😎 `2025.09.07` New updates! 
+## 🚀 Updates — 2025.09.07
 
-**Edit your `config.toml`!**
+We’ve added new customization options to make your site more flexible and personalized!
 
-* `primaryColor`: Try changing your theme's primary coloer
-* `showGithubChart`: Toggle the GitHub contributions chart display on your homepage on and off. (true / false)
+### Theme & Display
+- **`primaryColor`**: Set your theme’s primary color (hex code). ex: `"#fa8b84"`.
+- **`math`**: Enable or disable math rendering with KaTeX (`true` / `false`).
 
-``` toml
+### 🖼️ Main Image
+- **`mainImageUrl`**: URL of the main image shown on the homepage.  
+- **`showMainImage`**: Toggle the main image on or off (`true` / `false`).
+
+### 📊 GitHub Contribution Graph
+- **`githubUsername`**: Your GitHub username (used to fetch the contribution graph).  
+- **`showGithubChart`**: Show or hide the GitHub contributions chart on the homepage (`true` / `false`).
+
+### 🔖 Site Metadata
+- **`googleAnalytics`**: Your Google Analytics tracking ID (e.g., `"G-000000000"`).  
+- **`copyright`**: Footer copyright.
+
+### Example `hugo.toml`
+```toml
 [params]
-  googleAnalytics   = "G-000000000"   # Your Google Analytics tracking ID
-  githubUsername    = "elecbrandy"    # GitHub username for contribution chart
-  primaryColor      = "#ec42ff"     # Primary theme color (hex code)
-  showGithubChart   = true            # Set to true to display the GitHub contributions chart
+  # --- Site Metadata ---
+  googleAnalytics = "G-000000000"
+  copyright = "Copyright © 2024 elecbrandy"
+
+  # --- Theme & Display Settings ---
+  primaryColor = "#fa8b84"
   math = true
-  copyright = 'Copyright © 2024 elecbrandy'
+
+  # --- GitHub Chart ---
+  githubUsername = "elecbrandy"
+  showGithubChart = true
+
+  # --- Main Image ---
+  mainImageUrl = "https://i.imgur.com/URQWyyY.png"
+  showMainImage = true
 ```
 
 <br>

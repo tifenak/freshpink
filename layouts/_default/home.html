@@ -2,6 +2,16 @@
 
 {{ partial "breadcrumb.html" . }}
 
+{{ if .Site.Params.showMainImage }}
+  <div class="main-image">
+    <img
+      src="{{ .Site.Params.mainImageUrl }}"
+      style="max-width: 600px"
+      alt="Main Image"
+    />
+  </div>
+{{ end }}
+
 {{ if and .Site.Params.showGithubChart .Site.Params.githubUsername .Site.Params.primaryColor }}
   {{ $color := .Site.Params.primaryColor | replaceRE "^#" "" }}
   <div class="commit">
