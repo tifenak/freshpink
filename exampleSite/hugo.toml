@@ -31,7 +31,7 @@ weight = 30
   copyright = 'Copyright © 2024 elecbrandy'
 
   # --- Theme & Display Settings ---
-  primaryColor = "#ec42ff"
+  primaryColor = "#fa8b84"
   math = true
 
   # --- GitHub Chart ---
@@ -39,7 +39,7 @@ weight = 30
   showGithubChart = true
 
   # --- Main Image ---
-  mainImageUrl = "https://zrr.kr/8h01Eu"
+  mainImageUrl = "https://i.imgur.com/URQWyyY.png"
   showMainImage = true
 
 [taxonomies]

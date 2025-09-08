@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tag_c on freshpink</title>
-    <link>http://localhost:1313/freshpink/tags/tag_c/</link>
+    <link>http://localhost:1313/tags/tag_c/</link>
     <description>Recent content in Tag_c on freshpink</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 28 Mar 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/freshpink/tags/tag_c/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/tag_c/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>02. Features</title>
-      <link>http://localhost:1313/freshpink/posts/post-2/</link>
+      <link>http://localhost:1313/posts/post-2/</link>
       <pubDate>Fri, 28 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/freshpink/posts/post-2/</guid>
-      <description>&lt;br&gt;&#xA;&lt;h2 id=&#34;1-image-area&#34;&gt;1. Image Area&lt;/h2&gt;&#xA;&lt;p&gt;This theme provides an image area feature. You can insert a wide image area of your choice at the top of your &lt;code&gt;.md&lt;/code&gt; file according to the tomel format: &lt;code&gt;featured_image = “ ”&lt;/code&gt;.Insert a nice image that represents your post.&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;h2 id=&#34;2-tag&#34;&gt;2. Tag&lt;/h2&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;In each &lt;code&gt;.md&lt;/code&gt; file, you&amp;rsquo;ll also find a &lt;code&gt;tags = []&lt;/code&gt; field in the front matter. This is where you can assign tags to your post. For example:&lt;/p&gt;</description>
+      <guid>http://localhost:1313/posts/post-2/</guid>
+      <description>&lt;br&gt;&#xA;&lt;h2 id=&#34;1-main-image&#34;&gt;1. Main Image&lt;/h2&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;You can set a main image on the homepage.&#xA;Add the image URL in the &lt;code&gt;[params]&lt;/code&gt; section of &lt;code&gt;hugo.toml&lt;/code&gt; under &lt;code&gt;mainImageUrl&lt;/code&gt;.&lt;/p&gt;&#xA;&lt;p&gt;If you don’t want a main image, set &lt;code&gt;showMainImage&lt;/code&gt; to &lt;code&gt;false&lt;/code&gt;.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;mainImageUrl&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://i.imgur.com/URQWyyY.png&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;showMainImage&lt;/span&gt; = &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;h2 id=&#34;2-github-contribution-chart&#34;&gt;2. GitHub Contribution Chart&lt;/h2&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;You can also show your GitHub contribution graph on the homepage.&#xA;Add your GitHub username to &lt;code&gt;githubUsername&lt;/code&gt; in the &lt;code&gt;[params]&lt;/code&gt; section of &lt;code&gt;hugo.toml&lt;/code&gt;.&#xA;Control visibility with &lt;code&gt;showGithubChart&lt;/code&gt;.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
-<head><script src="/freshpink/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=freshpink/livereload" data-no-instant defer></script>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script>
@@ -16,11 +16,11 @@
 <meta name="viewport" content="width=device-width">
 <title>01. freshPink | freshpink</title>
 
-    <link rel="stylesheet" href="http://localhost:1313/freshpink/css/main.css">
-    <link rel="stylesheet" href="http://localhost:1313/freshpink/css/min600.css">
+    <link rel="stylesheet" href="http://localhost:1313/css/main.css">
+    <link rel="stylesheet" href="http://localhost:1313/css/min600.css">
 <style>
   :root {
-    --primary-color: #007bff;
+    --primary-color: #fa8b84;
   }
 </style>
 
@@ -45,9 +45,9 @@
 <body>
     <header class="main-header">
 	<nav>
-	  <li><a href="http://localhost:1313/freshpink/">/home</a></li>
-	  <li><a href="http://localhost:1313/freshpink/tags/">/tags</a></li>
-	  <li><a href="http://localhost:1313/freshpink/about/">/about</a></li>
+	  <li><a href="http://localhost:1313/">/home</a></li>
+	  <li><a href="http://localhost:1313/tags/">/tags</a></li>
+	  <li><a href="http://localhost:1313/about/">/about</a></li>
 	  <li id="theme-toggle" style="cursor: pointer;">/todark</li>
 	</nav>
   </header>
@@ -152,13 +152,29 @@
 That means the repository address that you will host through GitHub. In my case, I made it <code>hugo mod init github.com/elecbrandy/elecbrandy.github.io</code>.</p>
 <br>
 <h3 id="4-3-update-hugotoml">4-3. Update <code>hugo.toml</code></h3>
-<p>Open the generated <code>hugo.toml</code> file and <strong>replace its contents completely</strong> with the configuration below. Then, update it with your own information:</p>
+<p>Open the generated <code>hugo.toml</code> file and <strong>replace its contents completely</strong> with the configuration below. Then, update it with your own information -&gt;</p>
 <ul>
-<li><code>baseURL</code>: Enter the URL of your GitHub repository (e.g. <code>https://elecbrandy.github.io/</code>)</li>
-<li><code>title</code>: Choose the name you want for your blog</li>
-<li><code>githubUsername</code>: Your GitHub username — this is required to display your contribution graph (grass) on the homepage</li>
-<li><code>googleAnalytics</code>: (Optional) If you want to use Google Analytics, add your tracking ID here</li>
-<li>Important: <strong>Do not add or define a <code>theme</code> field.</strong> We&rsquo;re using Hugo Modules to manage the theme, so this must be left out.</li>
+<li>
+<p><code>baseURL</code>: Enter the URL of your GitHub repository (e.g. <code>https://elecbrandy.github.io/</code>)</p>
+</li>
+<li>
+<p><code>title</code>: Choose the name you want for your blog</p>
+</li>
+<li>
+<p><code>githubUsername</code>: Your GitHub username — this is required to display your contribution graph (grass) on the homepage</p>
+</li>
+<li>
+<p><code>googleAnalytics</code>: (Optional) If you want to use Google Analytics, add your tracking ID here</p>
+</li>
+<li>
+<p><code>primaryColor</code>: Primary theme color (hex code)</p>
+</li>
+<li>
+<p><code>showGithubChart</code>: Set to true to display the GitHub contributions chart (true / false)</p>
+</li>
+<li>
+<p>Important: <strong>Do not add or define a <code>theme</code> field.</strong> We&rsquo;re using Hugo Modules to manage the theme, so this must be left out.</p>
+</li>
 </ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#a6e22e">baseURL</span> = <span style="color:#e6db74">&#39;https://example.org/&#39;</span> <span style="color:#75715e"># your git repository address</span>
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">title</span> = <span style="color:#e6db74">&#39;freshpink&#39;</span> <span style="color:#75715e"># your own blog title</span>
@@ -188,10 +204,21 @@ That means the repository address that you will host through GitHub. In my case,
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">path</span> = <span style="color:#e6db74">&#34;github.com/elecbrandy/freshpink&#34;</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>[<span style="color:#a6e22e">params</span>]
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">googleAnalytics</span> = <span style="color:#e6db74">&#39;G-000000000&#39;</span> <span style="color:#75715e"># your GoogleAnalytics code</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">githubUsername</span> = <span style="color:#e6db74">&#39;elecbrandy&#39;</span> <span style="color:#75715e"># your githubUsername</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># --- Site Metadata ---</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">googleAnalytics</span> = <span style="color:#e6db74">&#34;G-000000000&#34;</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">copyright</span> = <span style="color:#e6db74">&#39;Copyright © 2024 elecbrandy&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># --- Theme &amp; Display Settings ---</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">primaryColor</span> = <span style="color:#e6db74">&#34;#fa8b84&#34;</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">math</span> = <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># --- GitHub Chart ---</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">githubUsername</span> = <span style="color:#e6db74">&#34;elecbrandy&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">showGithubChart</span> = <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># --- Main Image ---</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">mainImageUrl</span> = <span style="color:#e6db74">&#34;https://i.imgur.com/URQWyyY.png&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">showMainImage</span> = <span style="color:#66d9ef">true</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>[<span style="color:#a6e22e">taxonomies</span>]
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">tag</span> = <span style="color:#e6db74">&#39;tags&#39;</span>
