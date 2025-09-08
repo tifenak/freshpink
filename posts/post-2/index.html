@@ -16,8 +16,8 @@
 <meta name="viewport" content="width=device-width">
 <title>02. Features | freshpink</title>
 
-      <link rel="stylesheet" href="https://elecbrandy.github.io/freshpink/css/main.min.d44c672ab09ff4e7a40192b4c273b29b705ce87d7f4df5223640e4c24f28f310.css" integrity="sha256-1ExnKrCf9OekAZK0wnOym3Bc6H1/TfUiNkDkwk8o8xA=" crossorigin="anonymous">
-      <link rel="stylesheet" href="https://elecbrandy.github.io/freshpink/css/min600.min.c55885430d625813d1a6770ef6712b8534781fdd318699edd1bb9c6f62907507.css" integrity="sha256-xViFQw1iWBPRpncO9nErhTR4H90xhpnt0bucb2KQdQc=" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://example.org/css/main.min.d44c672ab09ff4e7a40192b4c273b29b705ce87d7f4df5223640e4c24f28f310.css" integrity="sha256-1ExnKrCf9OekAZK0wnOym3Bc6H1/TfUiNkDkwk8o8xA=" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://example.org/css/min600.min.c55885430d625813d1a6770ef6712b8534781fdd318699edd1bb9c6f62907507.css" integrity="sha256-xViFQw1iWBPRpncO9nErhTR4H90xhpnt0bucb2KQdQc=" crossorigin="anonymous">
 <style>
   :root {
     --primary-color: #ec42ff;
@@ -45,9 +45,9 @@
 <body>
     <header class="main-header">
 	<nav>
-	  <li><a href="https://elecbrandy.github.io/freshpink/">/home</a></li>
-	  <li><a href="https://elecbrandy.github.io/freshpink/tags/">/tags</a></li>
-	  <li><a href="https://elecbrandy.github.io/freshpink/about/">/about</a></li>
+	  <li><a href="https://example.org/">/home</a></li>
+	  <li><a href="https://example.org/tags/">/tags</a></li>
+	  <li><a href="https://example.org/about/">/about</a></li>
 	  <li id="theme-toggle" style="cursor: pointer;">/todark</li>
 	</nav>
   </header>
@@ -87,12 +87,13 @@
   <aside class="toc">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#1-image-area">1. Image Area</a></li>
-    <li><a href="#2-tag">2. Tag</a></li>
-    <li><a href="#3-primary-color">3. Primary color</a></li>
-    <li><a href="#4-ghchart">4. ghchart</a></li>
-    <li><a href="#5-toc">5. TOC</a></li>
-    <li><a href="#6-back-to-top-button">6. Back to Top Button</a></li>
+    <li><a href="#1-main-image">1. Main Image</a></li>
+    <li><a href="#2-github-contribution-chart">2. GitHub Contribution Chart</a></li>
+    <li><a href="#3-primary-color">3. Primary Color</a></li>
+    <li><a href="#4-featured-image-in-posts">4. Featured Image in Posts</a></li>
+    <li><a href="#5-tags">5. Tags</a></li>
+    <li><a href="#6-table-of-contents-toc">6. Table of Contents (TOC)</a></li>
+    <li><a href="#7-back-to-top-button">7. Back to Top Button</a></li>
   </ul>
 </nav>
   </aside>
@@ -108,48 +109,69 @@
     </div>
   </div>
   <br>
-<h2 id="1-image-area">1. Image Area</h2>
-<p>This theme provides an image area feature. You can insert a wide image area of your choice at the top of your <code>.md</code> file according to the tomel format: <code>featured_image = “ ”</code>.Insert a nice image that represents your post.</p>
-<br>
-<br>
-<h2 id="2-tag">2. Tag</h2>
+<h2 id="1-main-image">1. Main Image</h2>
 <hr>
-<p>In each <code>.md</code> file, you&rsquo;ll also find a <code>tags = []</code> field in the front matter. This is where you can assign tags to your post.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#a6e22e">tags</span> = [<span style="color:#e6db74">&#39;tag_a&#39;</span>]
-</span></span></code></pre></div><p>You can assign <strong>multiple tags</strong> to a single post, like this -&gt;</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#a6e22e">tags</span> = [<span style="color:#e6db74">&#39;tag_a&#39;</span>, <span style="color:#e6db74">&#39;tag_c&#39;</span>]
-</span></span></code></pre></div><p>On my own blog, I often use tags like <code>['c', 'unix']</code>.</p>
-<p>Now, what if you want to browse all posts by tag? Naturally, you’d want a <strong>Tags</strong> page where your custom tags are listed and clickable. Here&rsquo;s how to enable that -&gt;</p>
+<p>You can set a main image on the homepage.
+Add the image URL in the <code>[params]</code> section of <code>hugo.toml</code> under <code>mainImageUrl</code>.</p>
+<p>If you don’t want a main image, set <code>showMainImage</code> to <code>false</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#a6e22e">mainImageUrl</span> = <span style="color:#e6db74">&#34;https://i.imgur.com/URQWyyY.png&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">showMainImage</span> = <span style="color:#66d9ef">true</span>
+</span></span></code></pre></div><br>
+<br>
+<h2 id="2-github-contribution-chart">2. GitHub Contribution Chart</h2>
+<hr>
+<p>You can also show your GitHub contribution graph on the homepage.
+Add your GitHub username to <code>githubUsername</code> in the <code>[params]</code> section of <code>hugo.toml</code>.
+Control visibility with <code>showGithubChart</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#a6e22e">githubUsername</span> = <span style="color:#e6db74">&#34;elecbrandy&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">showGithubChart</span> = <span style="color:#66d9ef">true</span>
+</span></span></code></pre></div><br>
+<br>
+<h2 id="3-primary-color">3. Primary Color</h2>
+<hr>
+<p>By default, the primary color is set to <em>freshpink</em>.
+You can change it to any color you like in <code>hugo.toml</code> using a hex code.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#a6e22e">primaryColor</span> = <span style="color:#e6db74">&#34;#fa8b84&#34;</span>
+</span></span></code></pre></div><br>
+<br>
+<h2 id="4-featured-image-in-posts">4. Featured Image in Posts</h2>
+<hr>
+<p>Each post can have a featured image.
+At the top of your <code>.md</code> file, add the following in TOML format. This will display the image above your post.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>+++
+</span></span><span style="display:flex;"><span>title = &#39;{{ replace .File.ContentBaseName &#34;-&#34; &#34; &#34; | title }}&#39;
+</span></span><span style="display:flex;"><span>date = {{ .Date }}
+</span></span><span style="display:flex;"><span>featured_image = &#34;/basic.png&#34;
+</span></span><span style="display:flex;"><span>tags = [&#39;tag1&#39;]
+</span></span><span style="display:flex;"><span>draft = true
+</span></span><span style="display:flex;"><span>+++
+</span></span></code></pre></div><br>
+<br>
+<h2 id="5-tags">5. Tags</h2>
+<hr>
+<p>In the front matter of each <code>.md</code> file, you’ll see a <code>tags = []</code> field.
+Use this to assign tags to your post.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>tags = [&#39;tag_a&#39;]
+</span></span></code></pre></div><p>You can assign multiple tags -&gt;</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>tags = [&#39;tag_a&#39;, &#39;tag_c&#39;]
+</span></span></code></pre></div><p>To browse posts by tag, create a <strong>Tags page</strong>:</p>
 <ol>
-<li>Go to your <code>content/tags</code> directory (create it if it doesn’t exist).</li>
-<li>Inside, create one <code>.md</code> file for each tag you want to appear — for example -&gt;</li>
+<li>Go to <code>content/tags</code> (create it if it doesn’t exist).</li>
+<li>Inside, create a directory named after your tag (e.g., <code>unix</code>).
+This makes <code>content/tags/unix</code> and completes the setup.</li>
 </ol>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>content/tags/tag_a/_index.md
-</span></span></code></pre></div><p>That’s it! Hugo will automatically generate tag listing pages for you. Simple, right?</p>
 <br>
 <br>
-<h2 id="3-primary-color">3. Primary color</h2>
+<h2 id="6-table-of-contents-toc">6. Table of Contents (TOC)</h2>
 <hr>
-<p>You can customize the primary color to anything you like. Since pink felt a bit too bright, it’s now configurable—try out different shades! Just open your <code>hugo.toml</code> file and update the <code>primaryColor</code> value under the <code>params</code> section.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[<span style="color:#a6e22e">params</span>]
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">primaryColor</span> = <span style="color:#e6db74">&#34;#ec42ff&#34;</span>     <span style="color:#75715e"># Primary theme color (hex code)</span>
-</span></span></code></pre></div><br>
+<p>The theme includes a TOC on the left side of the post.
+By default, it is transparent so it doesn’t distract while reading. When you hover over it, it becomes visible and clickable.</p>
 <br>
-<h2 id="4-ghchart">4. ghchart</h2>
+<br>
+<h2 id="7-back-to-top-button">7. Back to Top Button</h2>
 <hr>
-<p>On your homepage, you can display your GitHub contributions chart. Just open your <code>hugo.toml</code> (or <code>config.toml</code>) file and update the <code>params</code> section with your details. Control the chart’s visibility by setting <code>showGithubChart</code> to <code>true</code> or <code>false</code>, and feel free to customize the <code>primaryColor</code> value to any hex code you like.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[<span style="color:#a6e22e">params</span>]
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">githubUsername</span>    = <span style="color:#e6db74">&#34;elecbrandy&#34;</span>    <span style="color:#75715e"># GitHub username for contribution chart</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">showGithubChart</span>   = <span style="color:#66d9ef">true</span>            <span style="color:#75715e"># Set to true to display the GitHub contributions chart</span>
-</span></span></code></pre></div><br>
-<br>
-<h2 id="5-toc">5. TOC</h2>
-<hr>
-<p>This theme has a TOC. It&rsquo;s on the left side of the body, and by default, it&rsquo;s transparent so it doesn&rsquo;t get in the way of reading the post. When you hover over it, it actually turns into an actionable text. As for the <code>&lt;h1&gt;</code> tag, it&rsquo;s considered a heading tag and can be hard to recognize to prevent abuse! Similar to hugo&rsquo;s tendency.</p>
-<br>
-<br>
-<h2 id="6-back-to-top-button">6. Back to Top Button</h2>
-<p>A &ldquo;Back to Top&rdquo; button, implemented via <a href="https://github.com/vfeskov/vanilla-back-to-top"><strong>Vanilla Back to Top</strong></a>, enhances navigation on your blog. This convenience feature makes it easy for readers to return to the top of the page, improving the overall user experience.</p>
+<p>A &ldquo;Back to Top&rdquo; button is included with <a href="https://github.com/vfeskov/vanilla-back-to-top">Vanilla Back to Top</a>.
+It makes navigation easier by letting readers quickly return to the top of the page.</p>
 <br>
 <br>
 

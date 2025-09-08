@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on freshpink</title>
-    <link>https://elecbrandy.github.io/freshpink/tags/</link>
+    <link>https://example.org/tags/</link>
     <description>Recent content in Tags on freshpink</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 28 Mar 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://elecbrandy.github.io/freshpink/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>tag_a</title>
-      <link>https://elecbrandy.github.io/freshpink/tags/tag_a/</link>
+      <link>https://example.org/tags/tag_a/</link>
       <pubDate>Fri, 28 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://elecbrandy.github.io/freshpink/tags/tag_a/</guid>
+      <guid>https://example.org/tags/tag_a/</guid>
       <description></description>
     </item>
     <item>
       <title>tag_b</title>
-      <link>https://elecbrandy.github.io/freshpink/tags/tag_b/</link>
+      <link>https://example.org/tags/tag_b/</link>
       <pubDate>Fri, 28 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://elecbrandy.github.io/freshpink/tags/tag_b/</guid>
+      <guid>https://example.org/tags/tag_b/</guid>
       <description></description>
     </item>
     <item>
       <title>Tag_c</title>
-      <link>https://elecbrandy.github.io/freshpink/tags/tag_c/</link>
+      <link>https://example.org/tags/tag_c/</link>
       <pubDate>Fri, 28 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://elecbrandy.github.io/freshpink/tags/tag_c/</guid>
+      <guid>https://example.org/tags/tag_c/</guid>
       <description></description>
     </item>
   </channel>

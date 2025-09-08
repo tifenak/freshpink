@@ -16,8 +16,8 @@
 <meta name="viewport" content="width=device-width">
 <title>01. freshPink | freshpink</title>
 
-      <link rel="stylesheet" href="https://elecbrandy.github.io/freshpink/css/main.min.d44c672ab09ff4e7a40192b4c273b29b705ce87d7f4df5223640e4c24f28f310.css" integrity="sha256-1ExnKrCf9OekAZK0wnOym3Bc6H1/TfUiNkDkwk8o8xA=" crossorigin="anonymous">
-      <link rel="stylesheet" href="https://elecbrandy.github.io/freshpink/css/min600.min.c55885430d625813d1a6770ef6712b8534781fdd318699edd1bb9c6f62907507.css" integrity="sha256-xViFQw1iWBPRpncO9nErhTR4H90xhpnt0bucb2KQdQc=" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://example.org/css/main.min.d44c672ab09ff4e7a40192b4c273b29b705ce87d7f4df5223640e4c24f28f310.css" integrity="sha256-1ExnKrCf9OekAZK0wnOym3Bc6H1/TfUiNkDkwk8o8xA=" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://example.org/css/min600.min.c55885430d625813d1a6770ef6712b8534781fdd318699edd1bb9c6f62907507.css" integrity="sha256-xViFQw1iWBPRpncO9nErhTR4H90xhpnt0bucb2KQdQc=" crossorigin="anonymous">
 <style>
   :root {
     --primary-color: #ec42ff;
@@ -45,9 +45,9 @@
 <body>
     <header class="main-header">
 	<nav>
-	  <li><a href="https://elecbrandy.github.io/freshpink/">/home</a></li>
-	  <li><a href="https://elecbrandy.github.io/freshpink/tags/">/tags</a></li>
-	  <li><a href="https://elecbrandy.github.io/freshpink/about/">/about</a></li>
+	  <li><a href="https://example.org/">/home</a></li>
+	  <li><a href="https://example.org/tags/">/tags</a></li>
+	  <li><a href="https://example.org/about/">/about</a></li>
 	  <li id="theme-toggle" style="cursor: pointer;">/todark</li>
 	</nav>
   </header>
@@ -204,12 +204,21 @@ That means the repository address that you will host through GitHub. In my case,
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">path</span> = <span style="color:#e6db74">&#34;github.com/elecbrandy/freshpink&#34;</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>[<span style="color:#a6e22e">params</span>]
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">googleAnalytics</span>   = <span style="color:#e6db74">&#34;G-000000000&#34;</span>   <span style="color:#75715e"># Your Google Analytics tracking ID</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">primaryColor</span>      = <span style="color:#e6db74">&#34;#ec42ff&#34;</span>     <span style="color:#75715e"># Primary theme color (hex code)</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">githubUsername</span>    = <span style="color:#e6db74">&#34;elecbrandy&#34;</span>    <span style="color:#75715e"># GitHub username for contribution chart</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">showGithubChart</span>   = <span style="color:#66d9ef">true</span>            <span style="color:#75715e"># Set to true to display the GitHub contributions chart</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">math</span> = <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># --- Site Metadata ---</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">googleAnalytics</span> = <span style="color:#e6db74">&#34;G-000000000&#34;</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">copyright</span> = <span style="color:#e6db74">&#39;Copyright © 2024 elecbrandy&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># --- Theme &amp; Display Settings ---</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">primaryColor</span> = <span style="color:#e6db74">&#34;#fa8b84&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">math</span> = <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># --- GitHub Chart ---</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">githubUsername</span> = <span style="color:#e6db74">&#34;elecbrandy&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">showGithubChart</span> = <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># --- Main Image ---</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">mainImageUrl</span> = <span style="color:#e6db74">&#34;https://i.imgur.com/URQWyyY.png&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">showMainImage</span> = <span style="color:#66d9ef">true</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>[<span style="color:#a6e22e">taxonomies</span>]
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">tag</span> = <span style="color:#e6db74">&#39;tags&#39;</span>
